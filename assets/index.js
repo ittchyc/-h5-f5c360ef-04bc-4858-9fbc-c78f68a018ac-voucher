@@ -44,6 +44,9 @@
   // 初始化
   $win.on('load', function() {
     remFn()
+    if(!navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+      $('#app').html(`<p class="pc-tip">请使用手机访问！</p>`)
+    }
   });
 
   // 验证码计时
