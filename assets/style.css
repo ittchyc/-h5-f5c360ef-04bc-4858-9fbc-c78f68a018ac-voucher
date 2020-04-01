@@ -131,7 +131,7 @@ input,
 select,
 option {
   vertical-align: middle;
-  border-radius: 0px;
+  border-radius: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -182,7 +182,9 @@ body{
   background-color: #f5f5f9;
 }
 #app{
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 .btn{
   display: flex;
@@ -190,7 +192,7 @@ body{
   margin-top: 0.2rem;
   padding-right: 0.2rem;
 }
-.btn .logout{
+.btn .topbtn{
   width: 0.6rem;
   height: 0.3rem;
   color: #000;
@@ -202,11 +204,14 @@ body{
   border-radius: 0.05rem;
   box-sizing: border-box;
 }
+.btn .topbtn:active{
+  background-color: #dadada;
+}
 .box{
   box-sizing: border-box;
   width: 3.51rem;
   height: 5.08rem;
-  background-image: url('./images/box_bg.png');
+  background-image: url('../images/box_bg.png');
   background-size: cover;
   border-radius: 0.04rem;
   margin: 0.24rem auto auto;
@@ -230,7 +235,7 @@ body{
   width: 1.91rem;
   height: 0.48rem;
   margin-right: 0.16rem;
-  background: url('./images/logo.png') no-repeat center;
+  background: url('../images/logo.png') no-repeat center;
   background-size: contain;
 }
 .content{
@@ -249,10 +254,10 @@ body{
   margin: 0 auto;
   width: 3.11rem;
   height: 4rem;
-  box-shadow: 0 1px 5px #000;
+  box-shadow: 0 0.01rem 0.05rem #000;
   border-radius: 0.05rem;
   padding: 0.4rem 0.2rem 0;
-  background: url('./images/bg.png') no-repeat left;
+  background: url('../images/bg.png') no-repeat left;
   background-size: cover;
   display: flex;
 }
@@ -260,16 +265,16 @@ body{
   position: absolute;
   left: 0;
   text-align: center;
-  bottom: -13px;
+  bottom: -0.13rem;
   width: 100%;
 }
 .swiper-pagination-bullet {
   display: inline-block;
-  width: 8px;
-  height:8px;
-  border-radius: 10px;
+  width: 0.08rem;
+  height: 0.08rem;
+  border-radius: 0.1rem;
   background: #ccc;
-  margin: 0 3px;
+  margin: 0 0.03rem;
   cursor: pointer;
   opacity: 1;
 }
@@ -281,7 +286,7 @@ body{
   width: 0.4rem;
   height: 0.4rem;
   margin-top: 0.06rem;
-  background: url('./images/icon.png') no-repeat center;
+  background: url('../images/icon.png') no-repeat center;
   background-size: contain;
 }
 .card .info{
@@ -315,10 +320,102 @@ body{
 .isok{
   width: 1.39rem;
   height: 1.39rem;
-  background: url('./images/isok.png') no-repeat center;
+  background: url('../images/isok.png') no-repeat center;
   background-size: contain;
   position: absolute;
   left: 0.2rem;
   bottom: 0.39rem;
-  
+}
+
+/* 登录 */
+.login-box{
+  padding: 0 0.3rem;
+  width: 100%;
+  height: 4.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+.login-box h1{
+  font-size: 0.24rem;
+  color: rgb(72, 68, 68);
+  text-align: center;
+  margin: 0.2rem 0;
+  font-weight: 600;
+}
+.login-box .tip{
+  font-size: 0.14rem;
+  color: rgb(99, 96, 96);
+  text-align: center;
+  margin: 0.12rem 0;
+  font-weight: 600;
+}
+.form .form-iphone, .form .form-code{
+  width: 100%;
+  height: 0.44rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 0.15rem;
+}
+.form .form-iphone p, .form .form-code p{
+  font-size: 0.17rem;
+  color: #000;
+}
+.form .form-iphone{
+  border-bottom: 0.01rem solid rgb(244, 243, 243, 0.7); 
+}
+.form .form-code .get-code{
+  width: 0.95rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  font-size: 0.13rem;
+  color: #108ee9;
+  border: 0.005rem solid #108ee9;
+  border-radius: 0.05rem;
+  margin-left: 0.25rem;
+}
+.form .form-iphone input, .form .form-code input{
+  margin-left: 0.3rem;
+  font-size: 0.17rem;
+  width: 1rem;
+}
+.login-box .tip-2{
+  color: red;
+  font-size: 0.14rem;
+  margin: 0.14rem 0;
+}
+.login-box .tip-3{
+  color: gray;
+  font-size: 0.14rem;
+}
+.login-btn{
+  font-size: 0.18rem;
+  height: 0.47rem;
+  line-height: 0.47rem;
+  text-align: center;
+  color: #fff;
+  background-color: #1f90e6;
+  margin-top: 0.15rem;
+  border-radius: 0.05rem;
+}
+.login-btn:active{
+  color: #60a8dd;
+  background-color: #1b82cf;
+}
+.code-num{
+  width: 0.51rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  font-size: 0.13rem;
+  color: rgba(0, 0, 0, .2);
+  border: 0.005rem solid rgba(0,0,0,.1);
+  background-color: #fff;
+  border-radius: 0.05rem;
+  margin-left: 0.62rem;
+  display: none;
 }
