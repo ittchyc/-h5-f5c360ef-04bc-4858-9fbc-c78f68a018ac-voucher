@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>防疫入楼凭证</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="btn">
+      <div class="logout">退出</div>
+    </div>
+    <div class="box">
+      <div class="top">
+        <p>入楼凭证</p>
+        <div class="logo"></div>
+      </div>
+      <div class="content">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card today">
+                <div class="icon"></div>
+                <div class="info">
+                  <h2>浦项中心</h2>
+                  <p class="-gs">颐月信息技术（北京）有限公司</p>
+                  <p class="-name">韩咏超</p>
+                  <p class="-iphone">187****3503</p>
+                  <p class="-date"></p>
+                </div>
+                <div class="isok"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card yesterday">
+                <div class="icon"></div>
+                <div class="info">
+                  <h2>浦项中心</h2>
+                  <p class="-gs">颐月信息技术（北京）有限公司</p>
+                  <p class="-name">韩咏超</p>
+                  <p class="-iphone">187****3503</p>
+                  <p class="-date"></p>
+                </div>
+                <div class="isok"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
+  <script>
+    // swiper
+    var mySwiper = new Swiper('.swiper-container', {
+      loop:true,
+      grabCursor: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    })
+  </script>
+</body>
+
+</html>

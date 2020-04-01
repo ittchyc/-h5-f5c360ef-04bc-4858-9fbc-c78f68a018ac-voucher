@@ -1,0 +1,324 @@
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol,
+li,
+ul,
+dl,
+dt,
+dd {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+strong {
+  font-weight: normal;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+  width: 100%;
+}
+
+i {
+  font: inherit;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+input,
+select,
+option {
+  vertical-align: middle;
+  border-radius: 0px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+html {  
+  -webkit-text-size-adjust: 100%;  
+  -ms-text-size-adjust: 100%;  
+  /* 解决IOS默认滑动很卡的情况 */  
+  -webkit-overflow-scrolling : touch;  
+}
+
+/* 禁止缩放表单 */  
+input[type="submit"], input[type="reset"], input[type="button"], input {  
+  resize: none;  
+  border: none;  
+}
+
+/* 图片自适应 */  
+img {  
+  width: 100%;  
+  height: auto;  
+  width: auto\9; /* ie8 */  
+  -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/  
+}
+
+html, body{
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,sans-serif;
+}
+body{
+  width: 100%;
+  background-color: #f5f5f9;
+}
+#app{
+  overflow: hidden;
+}
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+  padding-right: 0.2rem;
+}
+.btn .logout{
+  width: 0.6rem;
+  height: 0.3rem;
+  color: #000;
+  font-size: 0.13rem;
+  text-align: center;
+  line-height: 0.3rem;
+  border: 0.01rem solid #ddd;
+  background-color: #fff;
+  border-radius: 0.05rem;
+  box-sizing: border-box;
+}
+.box{
+  box-sizing: border-box;
+  width: 3.51rem;
+  height: 5.08rem;
+  background-image: url('./images/box_bg.png');
+  background-size: cover;
+  border-radius: 0.04rem;
+  margin: 0.24rem auto auto;
+  position: relative;;
+}
+.box .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box .top p{
+  height: 0.28rem;
+  font-size: 0.2rem;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: rgba(0,0,0,.85);
+  line-height: 0.28rem;
+  padding: 0.24rem 0 0.16rem 0.16rem;
+}
+.box .top .logo{
+  width: 1.91rem;
+  height: 0.48rem;
+  margin-right: 0.16rem;
+  background: url('./images/logo.png') no-repeat center;
+  background-size: contain;
+}
+.content{
+  width: 3.21rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+.swiper-container{
+  width: 321px;
+  height: 4rem;
+}
+.card{
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 3.11rem;
+  height: 4rem;
+  box-shadow: 0 1px 5px #000;
+  border-radius: 0.05rem;
+  padding: 0.4rem 0.2rem 0;
+  background: url('./images/bg.png') no-repeat left;
+  background-size: cover;
+  display: flex;
+}
+.swiper-pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: -13px;
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 8px;
+  height:8px;
+  border-radius: 10px;
+  background: #ccc;
+  margin: 0 3px;
+  cursor: pointer;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #888;
+  opacity: 1;
+}
+.card .icon{
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-top: 0.06rem;
+  background: url('./images/icon.png') no-repeat center;
+  background-size: contain;
+}
+.card .info{
+  color: #fff;
+  margin-left: 0.15rem;
+}
+.card .info h2{
+  font-size: 0.24rem;
+  font-family: PingFangSC-Semibold,PingFang SC;
+}
+.card .info .-gs{
+  font-size: 0.12rem;
+  font-family: PingFangSC-Regular,PingFang SC;
+}
+.card .info .-name{
+  font-size: 0.13rem;
+  font-family: PingFangSC-Medium,PingFang SC;
+  margin: 0.15rem 0 0.06rem 0.01rem;
+}
+.card .info .-iphone{
+  font-size: 0.13rem;
+  font-family: PingFangSC-Regular,PingFang SC;
+  margin-left: 0.01rem;
+}
+.card .info .-date{
+  font-size: 0.35rem;
+  margin: 0.13rem 0 0.23rem 0;
+  font-family: EurostileNextLTPro-SmBd;
+  font-weight: 600;
+}
+.isok{
+  width: 1.39rem;
+  height: 1.39rem;
+  background: url('./images/isok.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 0.2rem;
+  bottom: 0.39rem;
+  
+}
