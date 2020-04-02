@@ -82,9 +82,12 @@
   ]
   $('.login-btn').click(function () {
     var inp_iphone = $('#inpIphone').val();
-    var rule = datalist.filter(e => {
-      return e.iphone === inp_iphone
-    })
+    var rule = []
+    if (inp_iphone !== '' ) {
+      rule = datalist.filter(e => {
+        return e.iphone === inp_iphone
+      })
+    }
     if (inp_iphone === '' || inp_iphone.length !== 11 || rule.length === 0) {
       alert('请输入有效手机号')
     } else {
