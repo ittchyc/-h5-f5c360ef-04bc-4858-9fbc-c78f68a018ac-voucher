@@ -47,6 +47,11 @@
     if(!navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
       $('#app').html(`<p class="pc-tip">请使用手机访问！</p>`)
     }
+    var userInfo = JSON.parse(localStorage.getItem('px_user'));
+    if (userInfo) {
+      $('.info .-name').text(userInfo.name);
+      $('.info .-iphone').text(userInfo.iphone);
+    }
   });
 
   // 验证码计时
@@ -67,13 +72,31 @@
   })
 
   // 登录
+  var datalist = [
+    { iphone: '18731233503', name: '韩咏超' },
+    { iphone: '15120003668', name: '薛成' },
+    { iphone: '13244451123', name: '程琳' },
+    { iphone: '13126657077', name: '张传晓' }
+  ]
   $('.login-btn').click(function () {
-    window.location.href = 'index.html';
+    var inp_iphone = $('#inpIphone').val();
+    var rule = datalist.filter(e => {
+      return e.iphone === inp_iphone
+    })
+    if (inp_iphone === '' || inp_iphone.length !== 11 || rule.length === 0) {
+      alert('请输入有效手机号')
+    } else {
+      var json = JSON.stringify(rule[0]);
+      localStorage.setItem('px_user', json);
+      window.location.href = 'home.html';
+      
+    }
   })
 
   // 退出
   $('.logout').click(function () {
-    window.location.href = 'login.html';
+    localStorage.removeItem('px_user');
+    window.location.href = 'index.html';
   })
 
   // 语言切换

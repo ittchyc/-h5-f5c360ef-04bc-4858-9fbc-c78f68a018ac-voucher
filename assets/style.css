@@ -252,6 +252,11 @@ body{
   width: 321px;
   height: 4rem;
 }
+@media screen and (min-width: 376px) {
+  .swiper-container {
+    width: 361px;
+  }
+}
 .card{
   overflow: hidden;
   position: relative;
@@ -386,7 +391,7 @@ body{
 .form .form-iphone input, .form .form-code input{
   margin-left: 0.3rem;
   font-size: 0.17rem;
-  width: 1rem;
+  width: 1.1rem;
 }
 .login-box .tip-2{
   color: red;
