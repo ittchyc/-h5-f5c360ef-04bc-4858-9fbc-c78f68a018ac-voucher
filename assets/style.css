@@ -247,6 +247,8 @@ body{
   width: 3.21rem;
   height: 4rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 99;
 }
 .swiper-container{
   width: 321px;
