@@ -50,7 +50,9 @@
     var userInfo = JSON.parse(localStorage.getItem('px_user'));
     if (userInfo) {
       $('.info .-name').text(userInfo.name);
-      $('.info .-iphone').text(userInfo.iphone);
+      var iphoneN = userInfo.iphone
+      var iphoneD = iphoneN.substr(0, 3) + '****' + iphoneN.substr(7)
+      $('.info .-iphone').text(iphoneD);
     }
   });
 
