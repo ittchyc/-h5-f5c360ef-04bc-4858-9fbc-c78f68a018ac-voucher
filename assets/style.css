@@ -371,6 +371,7 @@ body{
   padding-left: 0.15rem;
 }
 .form .form-iphone p, .form .form-code p{
+  width: 0.6rem;
   font-size: 0.17rem;
   color: #000;
 }
@@ -378,7 +379,7 @@ body{
   border-bottom: 0.01rem solid rgb(244, 243, 243, 0.7); 
 }
 .form .form-code .get-code{
-  width: 0.9rem;
+  width: 0.93rem;
   height: 0.3rem;
   line-height: 0.3rem;
   text-align: center;
