@@ -378,7 +378,7 @@ body{
   border-bottom: 0.01rem solid rgb(244, 243, 243, 0.7); 
 }
 .form .form-code .get-code{
-  width: 0.95rem;
+  width: 0.9rem;
   height: 0.3rem;
   line-height: 0.3rem;
   text-align: center;
@@ -391,7 +391,12 @@ body{
 .form .form-iphone input, .form .form-code input{
   margin-left: 0.3rem;
   font-size: 0.17rem;
-  width: 1.1rem;
+}
+.form .form-iphone input{
+  width: 1.3rem;
+}
+.form .form-code input{
+  width: 0.9rem;
 }
 .login-box .tip-2{
   color: red;
