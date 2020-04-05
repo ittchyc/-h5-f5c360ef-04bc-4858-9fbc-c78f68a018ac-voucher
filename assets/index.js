@@ -84,11 +84,12 @@
     var inp_iphone = $('#inpIphone').val();
     var rule = []
     if (inp_iphone !== '' ) {
+      var res = inp_iphone.replace(/\s/g, "");
       rule = datalist.filter(e => {
-        return e.iphone === inp_iphone
+        return e.iphone === res
       })
     }
-    if (inp_iphone === '' || inp_iphone.length !== 11 || rule.length === 0) {
+    if (inp_iphone === '' || inp_iphone.length !== 13 || rule.length === 0) {
       alert('请输入有效手机号')
     } else {
       var json = JSON.stringify(rule[0]);

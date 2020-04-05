@@ -27,7 +27,7 @@
       <div class="form">
         <div class="form-iphone">
           <p>手机号</p>
-          <input id="inpIphone" type="text" maxlength="11">
+          <input id="inpIphone" type="text" maxlength="13" oninput="iphoneInp()">
         </div>
         <div class="form-code">
           <p>验证码</p>
@@ -44,6 +44,23 @@
 
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script src="./assets/index.js"></script>
+
+  <script>
+    function iphoneInp () {
+      var vals = $('#inpIphone').val();
+      var len = vals && vals.length;
+      var res;
+      if (len <= 4) {
+        res = vals.replace(/\D/g, '').replace(/...(?!$)/g, '$& ');
+        vals = res;
+      } else {
+        oneval = vals.substr(0, 3);
+        fourval = vals.substr(3);
+        res = oneval + ' ' + fourval.replace(/\D/g, '').replace(/....(?!$)/g, '$& ');
+      }
+      $('#inpIphone').val(res);
+    }
+  </script>
 </body>
 
 </html>
